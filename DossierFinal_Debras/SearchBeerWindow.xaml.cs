@@ -38,8 +38,6 @@ namespace DossierFinal_Debras
 
         private void Button_Search_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(Liste_beers.Count);
-            Console.WriteLine(CB_Beers.SelectedIndex);
             if (CB_Beers.SelectedIndex == -1 || CB_Beers.SelectedIndex >= Liste_beers.Count)
             {
                 LB_Error.Content = "U need to select a beer first !";

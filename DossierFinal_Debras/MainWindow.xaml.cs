@@ -172,7 +172,7 @@ namespace DossierFinal_Debras
                 LB_DescriptionBeer.Visibility = Visibility.Visible;
                 IM_Beer.Visibility = Visibility.Visible;
                 Search_Grid.DataContext = CurrentBeer;
-            }     
+            }
         }
 
         private void Button_reset_Click(object sender, RoutedEventArgs e)
@@ -182,6 +182,12 @@ namespace DossierFinal_Debras
             LB_NameBeer.Visibility = Visibility.Collapsed;
             IM_Beer.Visibility = Visibility.Collapsed;
             LB_DescriptionBeer.Visibility = Visibility.Collapsed;
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Serialization.WriteBeer("BeerFile", MyCollection.BeerCollection);
+            Serialization.WriteBrewery("BreweryFile", MyCollection.BreweryCollection);
         }
     }
 }

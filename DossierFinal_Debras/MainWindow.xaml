@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DossierFinal_Debras"
         xmlns:BeerLibrary="clr-namespace:BeerLibrary;assembly=BeerLibrary" x:Class="DossierFinal_Debras.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" MinHeight="418" MinWidth="650" Width="1000">
+        Title="MainWindow" Height="500" MinHeight="418" MinWidth="650" Width="1000" Closed="Window_Closed">
     <Window.Resources>
         <local:MyIntegerToColor x:Key="MyIntegerToColor"/>
     </Window.Resources>

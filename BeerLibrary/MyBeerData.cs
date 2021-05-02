@@ -56,6 +56,7 @@ namespace BeerLibrary
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
         }
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

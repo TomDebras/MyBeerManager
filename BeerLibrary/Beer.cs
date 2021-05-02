@@ -118,7 +118,8 @@ namespace BeerLibrary
         #region METHODES
         public override string ToString()
         {
-            return "Name :" + Name + "Number of beers remaining :" + NumberBeer + "Production date :" + ProductionDate + "Description :" + Description + "Brewery :" + Brewery;
+            return Name;
+            //return "Name :" + Name + "Number of beers remaining :" + NumberBeer + "Production date :" + ProductionDate + "Description :" + Description + "Brewery :" + Brewery;
         }
 
         public void Affiche()
@@ -132,6 +133,7 @@ namespace BeerLibrary
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
             }
         }
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion
 
