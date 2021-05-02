@@ -117,6 +117,7 @@ namespace DossierFinal_Debras
 
         private void Button_AddBeers_Click(object sender, RoutedEventArgs e)
         {
+            Button_reset_Click(sender, e);
             AddBeerWindow W = new AddBeerWindow(MyCollection.BeerCollection,MyCollection.BreweryCollection);
             W.ShowDialog();
         }
@@ -188,6 +189,13 @@ namespace DossierFinal_Debras
         {
             Serialization.WriteBeer("BeerFile", MyCollection.BeerCollection);
             Serialization.WriteBrewery("BreweryFile", MyCollection.BreweryCollection);
+        }
+
+        private void Button_AddBrewery_Click(object sender, RoutedEventArgs e)
+        {
+            Button_reset_Click(sender, e);
+            AddBreweryWindow W = new AddBreweryWindow(MyCollection.BreweryCollection);
+            W.ShowDialog();
         }
     }
 }

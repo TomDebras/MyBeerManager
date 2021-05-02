@@ -43,6 +43,7 @@ namespace DossierFinal_Debras
         public AddBeerWindow(ObservableCollection<Beer> b, ObservableCollection<Brewery> Br, Beer Curb)
         {
             InitializeComponent();
+            TB_Name.IsReadOnly = true;
             Button_Add.Visibility = Visibility.Collapsed;
             Liste_beers = b;
             Liste_brewery = Br;
@@ -55,9 +56,34 @@ namespace DossierFinal_Debras
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            CurrentBeer.Brewery = (Brewery)CB_Brewery.SelectedItem;
-            Liste_beers.Add(CurrentBeer);
-            this.DialogResult = true;
+            bool cond = false;
+            foreach(Beer item in Liste_beers)
+            {
+                if(item.Name.Equals(CurrentBeer.Name))
+                {
+                    cond = true;
+                    LB_Error.Content = "Beer already existing !!";
+                    break;
+                }
+            }
+            if(CB_Brewery.SelectedIndex == -1)
+            {
+                LB_Error.Content = "U need to choose a brewery !!";
+                cond = true;
+            }
+
+            if (!Int32.TryParse(TB_Number.Text, out _))
+            {
+                LB_Error.Content = "Number plz !!";
+                cond = true;
+            }
+
+            if(!cond)
+            {
+                CurrentBeer.Brewery = (Brewery)CB_Brewery.SelectedItem;
+                Liste_beers.Add(CurrentBeer);
+                this.DialogResult = true;
+            }
         }
 
         private void Button_Cancel_Click(object sender, RoutedEventArgs e)
@@ -80,8 +106,24 @@ namespace DossierFinal_Debras
 
         private void Button_Modify_Click(object sender, RoutedEventArgs e)
         {
-            CurrentBeer.Brewery = (Brewery)CB_Brewery.SelectedItem;
-            this.DialogResult = true;
+            bool cond = false;
+
+            if (CB_Brewery.SelectedIndex == -1)
+            {
+                LB_Error.Content = "U need to choose a brewery !!";
+                cond = true;
+            }
+
+            if (!Int32.TryParse(TB_Number.Text, out _))
+            {
+                LB_Error.Content = "Number plz !!";
+                cond = true;
+            }
+            if(!cond)
+            {
+                CurrentBeer.Brewery = (Brewery)CB_Brewery.SelectedItem;
+                this.DialogResult = true;
+            }
         }
     }
 }

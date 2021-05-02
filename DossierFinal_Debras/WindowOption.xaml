@@ -91,5 +91,6 @@
 
             </Button.Template>
         </Button>
+        <Label x:Name="LB_Error" HorizontalAlignment="Left" Height="34" Margin="25,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="140" FontFamily="Fonts/#Dosis" Foreground="Red" FontSize="14"/>
     </Grid>
 </Window>

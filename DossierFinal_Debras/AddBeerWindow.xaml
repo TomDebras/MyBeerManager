@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:DossierFinal_Debras"
         xmlns:BeerLibrary="clr-namespace:BeerLibrary;assembly=BeerLibrary" x:Class="DossierFinal_Debras.AddBeerWindow"
         mc:Ignorable="d"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Title="AddBeerWindow" Height="350" Width="700" Background="#181735">
     <Grid>
         <Grid.RowDefinitions>
@@ -42,7 +43,7 @@
             <TextBox x:Name="TB_Number" Grid.Column="1" HorizontalAlignment="Center" Height="24" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="135" Background="#181735" Foreground="White" Text="{Binding NumberBeer}"/>
             <TextBox x:Name="TB_Description" Grid.Column="1" HorizontalAlignment="Center" Height="24" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="135" Background="#181735" Foreground="White" Text="{Binding Description}"/>
             <TextBox x:Name="TB_Name" Grid.Column="1" HorizontalAlignment="Center" Height="24" Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="135" Background="#181735" Foreground="White" Text="{Binding Name}"/>
-            <DatePicker x:Name="DP_ProdDate" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Width="135" DisplayDate="{Binding ProductionDate ,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <DatePicker x:Name="DP_ProdDate" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Width="135" DisplayDate="{Binding ProductionDate ,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayDateEnd="{x:Static sys:DateTime.Today}" />
             <Button x:Name="Button_Add" Grid.Column="1"  Grid.Row="5" Content="Add"
                         Foreground="White"
                         FontSize="14" FontWeight="Medium" HorizontalAlignment="Right" Margin="0,0,0,-13" Click="Button_Add_Click">
@@ -126,6 +127,7 @@
 
                 </Button.Template>
             </Button>
+            <Label x:Name="LB_Error" HorizontalAlignment="Left" Height="33" Margin="46,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="284" FontFamily="Fonts/#Dosis" Foreground="Red" FontSize="15"/>
         </Grid>
     </Grid>
 </Window>

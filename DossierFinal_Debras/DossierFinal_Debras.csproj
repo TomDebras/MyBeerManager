@@ -58,6 +58,9 @@
     <Compile Include="AddBeerWindow.xaml.cs">
       <DependentUpon>AddBeerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddBreweryWindow.xaml.cs">
+      <DependentUpon>AddBreweryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyAppParamManager.cs" />
     <Compile Include="MyIntegerToColor.cs" />
     <Compile Include="SearchBeerWindow.xaml.cs">
@@ -69,6 +72,10 @@
       <DependentUpon>WindowOption.xaml</DependentUpon>
     </Compile>
     <Page Include="AddBeerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddBreweryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
