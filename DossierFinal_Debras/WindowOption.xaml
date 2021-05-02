@@ -1,0 +1,95 @@
+﻿<Window x:Class="DossierFinal_Debras.WindowOption"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DossierFinal_Debras"
+        mc:Ignorable="d"
+        Title="WindowOption" Height="250" Width="400" Background="#181735">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="Lb_Red" Content="Enter the Red :" HorizontalAlignment="center"
+               VerticalAlignment="Center" Grid.Column="0" Height="26" Width="105" Foreground="White" FontFamily="Fonts/#Dosis"/>
+        <Label x:Name="Lb_Green" Content="Enter the Green :" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Grid.Row="1" Height="26" Width="105" Foreground="White" FontFamily="Fonts/#Dosis" />
+        <Label x:Name="Lb_Blue" Content="Enter the Blue :" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Grid.Row="2" Height="26" Width="105" Foreground="White" FontFamily="Fonts/#Dosis"/>
+        <Label x:Name="Lb_Size" Content="Enter the Width :" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Grid.Row="3" Height="26" Width="105" Foreground="White" FontFamily="Fonts/#Dosis"/>
+        <TextBox x:Name="TB_Red" HorizontalAlignment="Center" Height="23"  TextWrapping="Wrap"
+                 VerticalAlignment="Center" Width="120" Grid.Column="1" Background="#39385D"  Foreground="White" FontSize="14"/>
+        <TextBox x:Name="TB_Green" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap"
+                 VerticalAlignment="Center" Width="120" Grid.Row="1" Grid.Column="1" Background="#39385D"  Foreground="White" FontSize="14"/>
+        <TextBox x:Name="TB_Blue" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap"
+                 VerticalAlignment="Center" Width="120" Grid.Row="2" Grid.Column="1" Background="#39385D"  Foreground="White" FontSize="14"/>
+        <TextBox x:Name="TB_Size" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap"
+                 VerticalAlignment="Center" Width="120" Grid.Row="3" Grid.Column="1" Background="#39385D" Foreground="White" FontSize="14"/>
+        <Button x:Name="Button_Apply" Content="Apply" Grid.Column="1" Grid.Row="4"
+                        Foreground="White"
+                        FontSize="10" FontWeight="Medium" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Button_Apply_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                    <Setter Property="Background" Value="#FE6584"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF4C70"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="80" Height="25" CornerRadius="12" Background="{TemplateBinding Background}" >
+                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="Button_Cancel" Content="Cancel" Grid.Column="1" Grid.Row="4"
+                        Foreground="White"
+                        FontSize="10" FontWeight="Medium" VerticalAlignment="Bottom" HorizontalAlignment="left" Margin="20,0,0,0" Click="Button_Cancel_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                    <Setter Property="Background" Value="#FE6584"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF4C70"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="80" Height="25" CornerRadius="12" Background="{TemplateBinding Background}" >
+                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
