@@ -38,13 +38,20 @@ namespace DossierFinal_Debras
 
         private void Button_Apply_Click(object sender, RoutedEventArgs e)
         {
-            if (Int32.TryParse(TB_Red.Text,out _) && Int32.TryParse(TB_Green.Text, out _) && Int32.TryParse(TB_Blue.Text, out _) && Int32.TryParse(TB_Size.Text, out _))
+            if (Int32.TryParse(TB_Red.Text,out int R) && Int32.TryParse(TB_Green.Text, out int G) && Int32.TryParse(TB_Blue.Text, out int B) && Int32.TryParse(TB_Size.Text, out int Size))
             {
-                OptWin.R = Convert.ToInt32(TB_Red.Text);
-                OptWin.G = Convert.ToInt32(TB_Green.Text);
-                OptWin.B = Convert.ToInt32(TB_Blue.Text);
-                OptWin.Width = Convert.ToInt32(TB_Size.Text);
-                this.DialogResult = true;
+                if(R <= 255 && R >= 0 && G <= 255 && G >= 0 && B <= 255 && B >= 0)
+                {
+                    OptWin.R = Convert.ToInt32(TB_Red.Text);
+                    OptWin.G = Convert.ToInt32(TB_Green.Text);
+                    OptWin.B = Convert.ToInt32(TB_Blue.Text);
+                    OptWin.Width = Convert.ToInt32(TB_Size.Text);
+                    this.DialogResult = true;
+                }
+                else
+                {
+                    LB_Error.Content = "set correct value plz !!";
+                }
             }
             else
             {

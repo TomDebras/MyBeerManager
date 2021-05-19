@@ -83,13 +83,10 @@ namespace DossierFinal_Debras
             //MyCollection.BeerCollection.Add(new Beer(42, "Triple Westmalle", "12% Blond beer", new DateTime(2009, 2, 10), WestmalleBrewery, @"Images\TripleWestmalle.png"));
             //MyCollection.BeerCollection.Add(new Beer(42, "ValDieu", "9% Blond beer", new DateTime(2007, 6, 16), ValDieuBrewery, @"Images\ValDieu.png"));
 
-            //Serialization.WriteBeer("BeerFile", MyCollection.BeerCollection);
-            //Serialization.WriteBrewery("BreweryFile", MyCollection.BreweryCollection);
+            //Serialization.WriteMyBeerData("MyBeerDataFile", MyCollection);
 
             #endregion
-            MyCollection.BeerCollection = Serialization.ReadBeer("BeerFile");
-            MyCollection.BreweryCollection = Serialization.ReadBrewery("BreweryFile");
-            ReferenceMyBeer();
+            MyCollection = Serialization.ReadMyBeerData("MyBeerDataFile");
             Application.Current.MainWindow.Background = AppManager.AppBaseColor;
             DG_Beers.ItemsSource = MyCollection.BeerCollection;
             DG_Beers.DataContext = MyCollection.BeerCollection;
@@ -148,19 +145,6 @@ namespace DossierFinal_Debras
 
         }
 
-        private void ReferenceMyBeer()
-        {
-            foreach(Beer item in MyCollection.BeerCollection)
-            {
-                foreach(Brewery item2 in MyCollection.BreweryCollection)
-                    if(item.Brewery.Name.Equals(item2.Name))
-                    {
-                        item.Brewery = item2;
-                        break;
-                    }
-            }
-        }
-
         private void Button_Search_Click(object sender, RoutedEventArgs e)
         {
             SearchBeerWindow w = new SearchBeerWindow(MyCollection.BeerCollection, CurrentBeer);
@@ -187,8 +171,9 @@ namespace DossierFinal_Debras
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            Serialization.WriteBeer("BeerFile", MyCollection.BeerCollection);
-            Serialization.WriteBrewery("BreweryFile", MyCollection.BreweryCollection);
+            //Serialization.WriteBeer("BeerFile", MyCollection.BeerCollection);
+            //Serialization.WriteBrewery("BreweryFile", MyCollection.BreweryCollection);
+            Serialization.WriteMyBeerData("MyBeerDataFile", MyCollection);
         }
 
         private void Button_AddBrewery_Click(object sender, RoutedEventArgs e)

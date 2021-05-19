@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace BeerLibrary
 {
-   public class MyBeerData : INotifyPropertyChanged
+    [Serializable()]
+    public class MyBeerData : INotifyPropertyChanged
     {
         private ObservableCollection<Beer> _BeerCollection;
         private ObservableCollection<Brewery> _BreweryCollection;
