@@ -61,13 +61,9 @@
     <Compile Include="AddBreweryWindow.xaml.cs">
       <DependentUpon>AddBreweryWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyAppParamManager.cs" />
-    <Compile Include="MyIntegerToColor.cs" />
     <Compile Include="SearchBeerWindow.xaml.cs">
       <DependentUpon>SearchBeerWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Serialization.cs" />
-    <Compile Include="OptionWindow.cs" />
     <Compile Include="WindowOption.xaml.cs">
       <DependentUpon>WindowOption.xaml</DependentUpon>
     </Compile>
@@ -131,6 +127,10 @@
     <ProjectReference Include="..\BeerLibrary\BeerLibrary.csproj">
       <Project>{18cb2ad9-0ad8-4fa6-bcaa-0eef08c40f28}</Project>
       <Name>BeerLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyApplicationOption\MyApplicationOption.csproj">
+      <Project>{f4a973f5-95a2-4795-af05-c10d24282e0a}</Project>
+      <Name>MyApplicationOption</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

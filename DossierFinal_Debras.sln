@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DossierFinal_Debras", "Doss
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerLibrary", "BeerLibrary\BeerLibrary.csproj", "{18CB2AD9-0AD8-4FA6-BCAA-0EEF08C40F28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApplicationOption", "MyApplicationOption\MyApplicationOption.csproj", "{F4A973F5-95A2-4795-AF05-C10D24282E0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{18CB2AD9-0AD8-4FA6-BCAA-0EEF08C40F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18CB2AD9-0AD8-4FA6-BCAA-0EEF08C40F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18CB2AD9-0AD8-4FA6-BCAA-0EEF08C40F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A973F5-95A2-4795-AF05-C10D24282E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A973F5-95A2-4795-AF05-C10D24282E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A973F5-95A2-4795-AF05-C10D24282E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A973F5-95A2-4795-AF05-C10D24282E0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DossierFinal_Debras"
         xmlns:BeerLibrary="clr-namespace:BeerLibrary;assembly=BeerLibrary" x:Class="DossierFinal_Debras.MainWindow"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        mc:Ignorable="d"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:local1="clr-namespace:MyApplicationOption;assembly=MyApplicationOption"
+    mc:Ignorable="d"
         Title="MainWindow" Height="500" MinHeight="418" MinWidth="650" Width="1000" Closed="Window_Closed">
     <Window.Resources>
-        <local:MyIntegerToColor x:Key="MyIntegerToColor"/>
+        <local1:MyIntegerToColor x:Key="MyIntegerToColor"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>

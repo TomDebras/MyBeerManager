@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyApplicationOption;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace DossierFinal_Debras
         {
             InitializeComponent();
         }
-        public WindowOption(OptionWindow e )
+        public WindowOption(MyApplicationOption.OptionWindow e )
         {
             InitializeComponent();
             OptWin = e;
